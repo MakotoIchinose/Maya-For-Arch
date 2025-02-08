@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
-source $PWD/scripts/2020.sh
 source $PWD/scripts/2022.sh
 source $PWD/scripts/2023.sh
 source $PWD/scripts/adsk.sh
@@ -11,13 +10,6 @@ source $PWD/scripts/adsk.sh
 function convertMaya()
 {
     case $1 in
-        2020)
-            rpmToDeb2020
-            mvDebPkg2020 $2
-            cd $2
-            debToZst2020
-        ;;
-
         2022)
             rpmToDeb2022
             mvDebPkg2022 $2

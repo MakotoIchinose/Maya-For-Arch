@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
-source $PWD/scripts/2020.sh
 source $PWD/scripts/2022.sh
 source $PWD/scripts/2023.sh
 
@@ -10,10 +9,6 @@ source $PWD/scripts/2023.sh
 function installDep()
 {
     case $1 in
-        2020)
-            installDep2020 $2
-        ;;
-
         2022)
             installDep2022 $2
         ;;

@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
-source $PWD/scripts/2020.sh
 source $PWD/scripts/2022.sh
 source $PWD/scripts/2023.sh
 source $PWD/scripts/adsk.sh
@@ -14,10 +13,6 @@ function cleanMaya()
 {
     cd $2
     case $1 in
-        2020)
-            rmDebPkg2020
-        ;;
-
         2022)
             rmDebPkg2022
         ;;
