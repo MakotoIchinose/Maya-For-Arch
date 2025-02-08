@@ -17,24 +17,24 @@ Note: Depending on your processor, converting the rpm packages may take quite so
 
 1. Download Maya for Linux from https://www.autodesk.com/
 
-2. Download Autodesk Licensing Service [here](https://knowledge.autodesk.com/search-result/caas/downloads/content/autodesk-licensing-service-download.html) (only if you don't have it installed or want to update it).
+1. Download Autodesk Licensing Service [here](https://knowledge.autodesk.com/search-result/caas/downloads/content/autodesk-licensing-service-download.html) (only if you don't have it installed or want to update it).
 
-3. Clone this project wherever you like on your PC.
+1. Clone this project wherever you like on your PC.
 
    ```bash
    git clone https://github.com/MakotoIchinose/Maya-For-Arch.git
    ```
 
-4. Cd into Maya-For-Arch
+1. Cd into Maya-For-Arch
 
    ```bash
    cd Maya-For-Arch
    ```
 
-5. Put the "Autodesk_Maya.tgz" and the "AdskLicensingInstaller.tar.gz" (optional based on step 2) 
+1. Put the "Autodesk_Maya.tgz" and the "AdskLicensingInstaller.tar.gz" (optional based on step 2) 
    files in the "Maya-For-Arch" folder.
 
-6. Execute the installer script.
+1. Execute the installer script.
 
    Note: This will update your system and install all required dependecies. If you don't want
    to update your system, modify the "installDep 'version' () function" in "scripts/'version'.sh"
@@ -43,7 +43,7 @@ Note: Depending on your processor, converting the rpm packages may take quite so
    sudo ./install.sh
    ```
 
-7. Select the Maya version you want to install.
+1. Select the Maya version you want to install.
 
    ```
    Select the version you want to install
@@ -53,27 +53,27 @@ Note: Depending on your processor, converting the rpm packages may take quite so
    version:
    ```
 
-8. Choose based in your decision in step 2.
+1. Choose based in your decision in step 2.
 
    ```
    Install Autodesk Licensing Service? [Y/N]:
    ```
 
-9. Choose whether you want to enable logging during installation. This is useful to check if something went wrong during the installation process.
+1. Choose whether you want to enable logging during installation. This is useful to check if something went wrong during the installation process.
 
    ```
    Enable logging of this installation? Type D for explicit debugging [Y/N/D]: 
    ```
 
-   Choosing D will enable bash debugging in the terminal.
+   Choosing D will enable bash verbose debugging in the terminal, meaning it'll log the command it tries to run.
 
-10. Enter you user name (same as your home folder)
+1. Enter your user name (same as your home folder)
 
    ```bash
    Enter your username:
    ```
 
-   10.1. If the script does not execute, chmod all ".sh" files
+   1. If the script does not execute, chmod all ".sh" files
 
    ```bash
    chmod +x install.sh
@@ -85,9 +85,9 @@ Note: Depending on your processor, converting the rpm packages may take quite so
    chmod +x -R scripts
    ```
 
-11. Maya should now be up and running!
+1. Maya should now be up and running!
 
-12. Note: The converted packages are saved 
+1. Note: The converted packages are saved 
     in case you need to reinstall the software.
 
     If you want to install an update 
@@ -108,7 +108,7 @@ Note: Depending on your processor, converting the rpm packages may take quite so
    sudo ./uninstall.sh
    ```
 
-2. Select the Maya version you want to uninstall.
+1. Select the Maya version you want to uninstall.
 
    ```bash
     Select the version you want to uninstall
@@ -118,14 +118,14 @@ Note: Depending on your processor, converting the rpm packages may take quite so
     version:
    ```
 
-3. If you are going to install another version of Maya (or if other Autodesk software needs it), 
+1. If you are going to install another version of Maya (or if other Autodesk software needs it), 
    you should not uninstall Autodesk Licensing Service. Otherwise, you can uninstall it.
 
    ```bash
    Uninstall Autodesk Licensing Service? [Y/N]:
    ```
 
-4. Enter your username (same as your home folder)
+1. Enter your username (same as your home folder)
 
    ```bash
    Enter your username:
