@@ -4,9 +4,9 @@ source $PWD/scripts/uninstall.sh
 source $PWD/scripts/common.sh
 
 echo -e "\nSelect the version you want to uninstall"
-echo "[1] Maya 2020"
-echo "[2] Maya 2022"
-echo "[3] Maya 2023"
+echo "[1] Maya 2022"
+echo "[2] Maya 2023"
+echo "[3] Maya 2024"
 echo -n "version: "
 read VERSION
 
@@ -19,16 +19,16 @@ read NONROOT
 HOME_DIR=/home/$NONROOT
 
 case $VERSION in
-    1 | 2020)
-        VERSION=2020
-    ;;
-
-    2 | 2022)
+    1 | 2022)
         VERSION=2022
     ;;
 
-    3 | 2023)
+    2 | 2023)
         VERSION=2023
+    ;;
+
+    3 | 2024)
+        VERSION=2024
     ;;
 esac
 

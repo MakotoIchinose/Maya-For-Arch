@@ -18,16 +18,16 @@ function registerMaya()
     VERSION=Current
 
     case $1 in
-        2020)
-            NUMBER=657L1
-        ;;
-
         2022)
             NUMBER=657N1
         ;;
 
         2023)
             NUMBER=657O1
+        ;;
+
+        2024)
+            NUMBER=657P1
         ;;
     esac
 
@@ -63,10 +63,6 @@ function setEnv()
     echo "MAYA_COLOR_MGT_NO_LOGGING=1" >> /home/$2/maya/$1/Maya.env
     echo "MAYA_DISABLE_CIP=1" >> /home/$2/maya/$1/Maya.env
     echo "TMPDIR=/tmp" >> /home/$2/maya/$1/Maya.env
-
-    if [[ $1 > 2020 ]]; then
-        echo "MAYA_NO_HOME=1" >> /home/$2/maya/$1/Maya.env
-    fi
 
     chown $2:$2 /home/$2/maya/$1/Maya.env
 }

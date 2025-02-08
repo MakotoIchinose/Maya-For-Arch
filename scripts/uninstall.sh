@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
-source $PWD/scripts/2020.sh
 source $PWD/scripts/2022.sh
 source $PWD/scripts/2023.sh
+source $PWD/scripts/2024.sh
 source $PWD/scripts/adsk.sh
 
 # Uninstall Maya packages
@@ -10,16 +10,15 @@ source $PWD/scripts/adsk.sh
 function uninstallMaya()
 {
     case $1 in
-        2020)
-            uninstallPkg2020
-        ;;
-
         2022)
             uninstallPkg2022
         ;;
 
         2023)
             uninstallPkg2023
+        ;;
+        2024)
+            uninstallPkg2024
         ;;
     esac
 }

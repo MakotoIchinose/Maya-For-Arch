@@ -12,6 +12,7 @@ echo -e "\n        Modified by IchinoseP        \n"
 echo "Select the version you want to install"
 echo "[1] Maya 2022"
 echo "[2] Maya 2023"
+echo "[3] Maya 2024"
 echo -n "version: "
 read VERSION
 
@@ -31,6 +32,9 @@ case $VERSION in
 
     2 | 2023)
         VERSION=2023
+    ;;
+    3 | 2024)
+        VERSION=2024
     ;;
 esac
 
