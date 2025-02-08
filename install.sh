@@ -10,9 +10,8 @@ echo -e "\n====== Maya For Arch by MyHCel ======\n"
 echo -e "\n        Modified by IchinoseP        \n"
 
 echo "Select the version you want to install"
-echo "[1] Maya 2020"
-echo "[2] Maya 2022"
-echo "[3] Maya 2023"
+echo "[1] Maya 2022"
+echo "[2] Maya 2023"
 echo -n "version: "
 read VERSION
 
@@ -26,15 +25,11 @@ echo -n "Enter your username: "
 read NONROOT
 
 case $VERSION in
-    1 | 2020)
-        VERSION=2020
-    ;;
-
-    2 | 2022)
+    1 | 2022)
         VERSION=2022
     ;;
 
-    3 | 2023)
+    2 | 2023)
         VERSION=2023
     ;;
 esac

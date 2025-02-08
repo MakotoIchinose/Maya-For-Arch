@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
-source $PWD/scripts/2020.sh
 source $PWD/scripts/2022.sh
 source $PWD/scripts/2023.sh
 source $PWD/scripts/adsk.sh
@@ -15,11 +14,6 @@ function installMaya()
 {
     cd $3
     case $1 in
-        2020)
-            installLib2020 $4
-            installPkg2020
-        ;;
-
         2022)
             installLib2022 $4
             installPkg2022
