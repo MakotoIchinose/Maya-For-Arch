@@ -22,7 +22,7 @@ Note: Depending on your processor, converting the rpm packages may take quite so
 3. Clone this project wherever you like on your PC.
 
    ```bash
-   git clone https://github.com/MyHCel/Maya-For-Arch.git
+   git clone https://github.com/MakotoIchinose/Maya-For-Arch.git
    ```
 
 4. Cd into Maya-For-Arch
@@ -45,21 +45,29 @@ Note: Depending on your processor, converting the rpm packages may take quite so
 
 7. Select the Maya version you want to install.
 
-   ```bash
+   ```
    Select the version you want to install
-   [1] Maya 2020
-   [2] Maya 2022
-   [3] Maya 2023
+   [1] Maya 2022
+   [2] Maya 2023
+   [3] Maya 2024
    version:
    ```
 
 8. Choose based in your decision in step 2.
 
-   ```bash
+   ```
    Install Autodesk Licensing Service? [Y/N]:
    ```
 
-9. Enter you user name (same as your home folder)
+9. Choose whether you want to enable logging during installation. This is useful to check if something went wrong during the installation process.
+
+   ```
+   Enable logging of this installation? Type D for explicit debugging [Y/N/D]: 
+   ```
+
+   Choosing D will enable bash debugging in the terminal.
+
+10. Enter you user name (same as your home folder)
 
    ```bash
    Enter your username:
@@ -77,9 +85,9 @@ Note: Depending on your processor, converting the rpm packages may take quite so
    chmod +x -R scripts
    ```
 
-10. Maya should now be up and running!
+11. Maya should now be up and running!
 
-11. Note: The converted packages are saved 
+12. Note: The converted packages are saved 
     in case you need to reinstall the software.
 
     If you want to install an update 
@@ -88,8 +96,8 @@ Note: Depending on your processor, converting the rpm packages may take quite so
     the corresponding cached files.
 
     ```bash
-    Maya-For-Arch/cache/<Maya version> -> Delete this folder to update that version of Maya.
-    Maya-For-Arch/cache/adsk -> Delete this folder to update Autodesk Licensing Service.
+    rm -rf Maya-For-Arch/cache/<Maya version> # Delete this folder to update that version of Maya.
+    rm -rf Maya-For-Arch/cache/adsk # Delete this folder to update Autodesk Licensing Service.
     ```
 
 ## Uninstalling Maya
@@ -104,9 +112,9 @@ Note: Depending on your processor, converting the rpm packages may take quite so
 
    ```bash
     Select the version you want to uninstall
-    [1] Maya 2020
-    [2] Maya 2022
-    [3] Maya 2023
+    [1] Maya 2022
+    [2] Maya 2023
+    [3] Maya 2024
     version:
    ```
 
@@ -133,6 +141,9 @@ Note: Depending on your processor, converting the rpm packages may take quite so
 * Fixed home screen not working (not really, it just gets disabled :p).
 * Fixed crash when using Mesa drivers.
 * Added Maya 2023
+* Removed Maya 2020 as it's no longer available through normal means
+* Added install logging feature w/ bash debugging
+* Update Autodesk Licensing Service install to use Autodesk Identity Manager
 
 ## Known issues
 
@@ -144,6 +155,9 @@ Note: Depending on your processor, converting the rpm packages may take quite so
 
 * The mtoh.so plug-in will give and error saying that "hdArnold.so" could not
   find "libai.so"
+
+* Hypothetically the updated Autodesk Licensing Manager might cause issue with versions
+  prior to 2024.
 
 ## I think that's all
 
