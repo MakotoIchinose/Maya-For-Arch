@@ -73,7 +73,7 @@ Note: Depending on your processor, converting the rpm packages may take quite so
    Enter your username:
    ```
 
-   9.1. If the script does not execute, chmod all ".sh" files
+   10.1. If the script does not execute, chmod all ".sh" files
 
    ```bash
    chmod +x install.sh
