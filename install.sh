@@ -4,8 +4,10 @@ source $PWD/scripts/dependencies.sh
 source $PWD/scripts/convert.sh
 source $PWD/scripts/install.sh
 source $PWD/scripts/clean.sh
+source $PWD/scripts/alien.sh
 
 echo -e "\n====== Maya For Arch by MyHCel ======\n"
+echo -e "\n        Modified by IchinoseP        \n"
 
 echo "Select the version you want to install"
 echo "[1] Maya 2020"
@@ -16,6 +18,9 @@ read VERSION
 
 echo -n "Install Autodesk Licensing Service? [Y/N]: "
 read ADSK
+
+echo -n "Enable logging of this installation? Type D for explicit debugging [Y/N/D]: "
+read LOGGING
 
 echo -n "Enter your username: "
 read NONROOT
@@ -31,6 +36,23 @@ case $VERSION in
 
     3 | 2023)
         VERSION=2023
+    ;;
+esac
+
+timestamp=$(date +"%Y-%m-%d_%H-%M-%S")  # Generate timestamp
+log_file="log_$timestamp.log"  # Define log filename
+
+case $LOGGING in
+    [Yy])
+        echo "Logging enabled. Output will be saved to $log_file"
+        exec > >(tee "$log_file") 2>&1
+    ;;
+    [Dd])
+        echo "Logging with bash debug enabled. Output will be saved to $log_file"
+        set -x
+        exec > >(tee "$log_file") 2>&1
+    ;;
+    *)
     ;;
 esac
 
@@ -65,6 +87,9 @@ fi
 if [[ $CACHE_MAYA_FLAG == 0 || $CACHE_ADSK_FLAG == 0 ]]; then
     sudo -u $NONROOT mkdir $PKG
     installUtil $NONROOT
+
+    # Check if alien can be detected
+    checkForAlien
 fi
 
 # Install adsk
