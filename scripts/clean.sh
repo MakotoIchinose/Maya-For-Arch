@@ -2,6 +2,7 @@
 
 source $PWD/scripts/2022.sh
 source $PWD/scripts/2023.sh
+source $PWD/scripts/2024.sh
 source $PWD/scripts/adsk.sh
 source $PWD/scripts/common.sh
 
@@ -18,6 +19,10 @@ function cleanMaya()
         ;;
 
         2023)
+            rmDebPkg2023
+        ;;
+
+        2024)
             rmDebPkg2023
         ;;
     esac
