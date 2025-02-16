@@ -9,6 +9,7 @@ Maya For Arch is a simple script that helps you install Autodesk Maya on Arch Li
 These are the dependencies needed by the script.
 
 * yay
+* debhelper
 * Lots of time
 
 ## How to use it
@@ -158,6 +159,8 @@ Note: Depending on your processor, converting the rpm packages may take quite so
 
 * Hypothetically the updated Autodesk Licensing Manager might cause issue with versions
   prior to 2024.
+
+* debhelper could fail to install as dependencies. It's advised to install it manually before running the install script.
 
 ## I think that's all
 
