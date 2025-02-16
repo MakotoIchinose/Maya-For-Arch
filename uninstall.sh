@@ -42,3 +42,14 @@ if [[ $ADSK == y || $ADSK == Y ]]; then
     rmAdskDirs $NONROOT
     rmAutodeskDirs $NONROOT
 fi
+
+echo -n "\nRemove cache directory? [y/N]: "
+read CACHE
+
+case $CACHE in
+    [Yy])
+        rm -rf cache
+    ;;
+    *)
+    ;;
+esac
