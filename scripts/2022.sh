@@ -29,7 +29,7 @@ function rpmToDeb2022()
 function mvDebPkg2022()
 {
     mv $(ls | grep bifrost | grep .deb) $1
-    mv $(ls | grep maya2022 | grep .deb) $1
+    mv $(ls | grep maya2022-64 | grep .deb) $1
     mv $(ls | grep mayausd | grep .deb) $1
     mv $(ls | grep pymel | grep .deb) $1
     mv $(ls | grep rokoko | grep .deb) $1
@@ -41,7 +41,7 @@ function mvDebPkg2022()
 function debToZst2022()
 {
     debtap -Q $(ls | grep bifrost | grep .deb)
-    debtap -Q $(ls | grep maya2022 | grep .deb)
+    debtap -Q $(ls | grep maya2022-64 | grep .deb)
     debtap -Q $(ls | grep mayausd | grep .deb)
     debtap -Q $(ls | grep pymel | grep .deb)
     debtap -Q $(ls | grep rokoko | grep .deb)
@@ -52,7 +52,7 @@ function debToZst2022()
 # the current directory
 function installPkg2022()
 {
-    pacman -U --noconfirm $(ls | grep maya2022 | grep .zst)
+    pacman -U --noconfirm $(ls | grep maya2022-64 | grep .zst)
     pacman -U --noconfirm $(ls | grep mayausd | grep .zst)
     pacman -U --noconfirm $(ls | grep bifrost | grep .zst)
     pacman -U --noconfirm $(ls | grep pymel | grep .zst)
@@ -89,7 +89,7 @@ function installLib2022()
 function rmDebPkg2022()
 {
     rm -f $(ls | grep bifrost | grep .deb)
-    rm -f $(ls | grep maya2022 | grep .deb)
+    rm -f $(ls | grep maya2022-64 | grep .deb)
     rm -f $(ls | grep mayausd | grep .deb)
     rm -f $(ls | grep pymel | grep .deb)
     rm -f $(ls | grep rokoko | grep .deb)
@@ -104,5 +104,5 @@ function uninstallPkg2022()
     pacman -Rns --noconfirm $(pacman -Qm | grep rokoko | awk '{print $1}')
     pacman -Rns --noconfirm $(pacman -Qm | grep substance | awk '{print $1}')
     pacman -Rns --noconfirm $(pacman -Qm | grep mayausd | awk '{print $1}')
-    pacman -Rns --noconfirm $(pacman -Qm | grep maya2022 | awk '{print $1}')
+    pacman -Rns --noconfirm $(pacman -Qm | grep maya2022-64 | awk '{print $1}')
 }
